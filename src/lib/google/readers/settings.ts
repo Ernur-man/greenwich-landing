@@ -3,7 +3,7 @@ import { createCachedReader, readSheetRange } from "@/lib/google/sheets";
 import { DEFAULT_SETTINGS, type SiteSettings } from "@/types/settings";
 
 async function fetchSettings(): Promise<SiteSettings> {
-  const rows = await readSheetRange(`${SHEET_NAMES.SETTINGS}!A:B`);
+  const rows = await readSheetRange(`${SHEET_NAMES.SETTINGS}!A:C`);
   const settings: SiteSettings = { ...DEFAULT_SETTINGS };
 
   if (rows.length <= 1) {
