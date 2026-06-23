@@ -16,6 +16,7 @@ export default async function HomePage() {
       <HeroSection
         title={settings.hero_title}
         subtitle={settings.hero_subtitle}
+        image={settings.hero_image}
       />
       <HowLearningWorksSection title={settings.how_it_works_title} />
       <TeachersSection title={settings.teachers_title} teachers={teachers} />

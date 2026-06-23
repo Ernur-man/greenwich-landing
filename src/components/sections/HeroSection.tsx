@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 interface HeroSectionProps {
   title: string;
   subtitle: string;
+  image: string;
 }
 
 const benefits = [
@@ -16,7 +17,7 @@ const benefits = [
   "Контроль прогресса на каждом этапе",
 ];
 
-export function HeroSection({ title, subtitle }: HeroSectionProps) {
+export function HeroSection({ title, subtitle, image }: HeroSectionProps) {
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-28">
       <Container>
@@ -48,9 +49,9 @@ export function HeroSection({ title, subtitle }: HeroSectionProps) {
             </div>
           </div>
 
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-neutral-100 shadow-sm">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-neutral-100 shadow-sm order-first lg:order-last">
             <Image
-              src="https://astarequivalency.co.uk/app/uploads/2022/06/Product-images-03_1.jpg"
+              src={image}
               alt="Обучение английскому языку в Keenfort"
               fill
               priority

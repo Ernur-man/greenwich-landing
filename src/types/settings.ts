@@ -1,6 +1,7 @@
 export interface SiteSettings {
   hero_title: string;
   hero_subtitle: string;
+  hero_image: string;
   teachers_title: string;
   reviews_title: string;
   pricing_title: string;
@@ -13,6 +14,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   hero_title: "Английский язык для амбициозных профессионалов",
   hero_subtitle:
     "Индивидуальный подход, экспертные преподаватели и измеримый результат. Онлайн и офлайн.",
+  hero_image: "/background.jpg",
   teachers_title: "Наши преподаватели",
   reviews_title: "Отзывы студентов",
   pricing_title: "Тарифы",

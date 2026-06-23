@@ -23,12 +23,13 @@ export function Header() {
       <Container className="flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="Keenfort">
           <Image
-            src="/images/logo.svg"
+            src="/keenfort_logo.svg"
             alt="Keenfort"
             width={140}
             height={36}
             priority
-            className="h-9 w-auto"
+            unoptimized
+            style={{ width: 'auto', height: '36px' }}
           />
         </Link>
 
