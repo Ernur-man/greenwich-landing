@@ -1,10 +1,19 @@
-import DOMPurify from "isomorphic-dompurify";
 
 export function sanitizeText(value: string): string {
-  return DOMPurify.sanitize(value, {
-    ALLOWED_TAGS: [],
-    ALLOWED_ATTR: [],
-  }).trim();
+  if (typeof value !== "string") {
+    return "";
+  }
+
+  return value
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
+    .replace(/<\/?[a-zA-Z!][^>]*>/g, "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;")
+    .trim();
 }
 
 export function sanitizeApplicationFields(fields: {
