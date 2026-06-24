@@ -21,5 +21,5 @@ export function isGoogleSheetsConfigured(): boolean {
 }
 
 export function getSiteUrl(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL ?? "https://keenfort-landing.vercel.app/";
+  return process.env.NEXT_PUBLIC_SITE_URL ?? "https://top-git-main-era8.vercel.app/";
 }

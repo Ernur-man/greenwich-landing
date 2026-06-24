@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 
 import { getSiteUrl } from "@/lib/google/constants";
 
-const SITE_NAME = "Keenfort";
-const DEFAULT_TITLE = "Keenfort — школа английского языка";
+const SITE_NAME = "Greenwich";
+const DEFAULT_TITLE = "Greenwich — школа английского языка";
 const DEFAULT_DESCRIPTION =
-  "Премиальная школа английского языка Keenfort. Индивидуальные программы, опытные преподаватели, онлайн и офлайн обучение, подготовка к IELTS.";
+  "Премиальная школа английского языка Greenwich. Индивидуальные программы, опытные преподаватели, онлайн и офлайн обучение, подготовка к IELTS.";
 const DEFAULT_KEYWORDS = [
   "английский язык",
   "школа английского",
-  "Keenfort",
+  "Greenwich",
   "IELTS",
   "разговорный английский",
   "обучение английскому",
@@ -75,7 +75,7 @@ export function buildJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: "Keenfort",
+    name: "Greenwich",
     url: siteUrl,
     description: DEFAULT_DESCRIPTION,
     logo: `${siteUrl}/images/logo.svg`,

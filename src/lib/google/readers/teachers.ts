@@ -15,9 +15,9 @@ function parseTeacherRow(row: string[], index: number): Teacher | null {
   return {
     id: id ?? "",
     name: name ?? "",
-    photo: photo?.trim() ?? "", // Колонка D (photo)
-    experience: role ?? "",     // Берем роль как опыт
-    description: bio ?? "",     // Колонка E (bio)
+    photo: photo?.trim() ?? "", 
+    experience: role ?? "",     
+    description: bio ?? "",     
   };
 }
 
