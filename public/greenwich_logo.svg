@@ -1,0 +1,21 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title {
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        font-weight: 800;
+        fill: #1a2238;
+        letter-spacing: 1px;
+      }
+      .subtitle {
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        font-weight: 600;
+        fill: #1a2238;
+        letter-spacing: 6px;
+      }
+    </style>
+  </defs>
+
+  <text x="600" y="170" text-anchor="middle" class="title" font-size="112">GREENWICH</text>
+  <text x="600" y="250" text-anchor="middle" class="subtitle" font-size="40">ENGLISH SCHOOL</text>
+</svg>

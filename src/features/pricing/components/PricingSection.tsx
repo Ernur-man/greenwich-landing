@@ -10,7 +10,7 @@ interface PricingSectionProps {
 
 export function PricingSection({ title, plans }: PricingSectionProps) {
   return (
-    <section id="pricing" className="bg-white py-20 lg:py-28">
+    <section id="pricing" className="bg-white py-24 lg:py-32">
       <Container>
         <SectionHeading
           title={title}
@@ -18,13 +18,17 @@ export function PricingSection({ title, plans }: PricingSectionProps) {
         />
 
         {plans.length > 0 ? (
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {plans.map((plan) => (
               <PricingCard key={plan.id} plan={plan} />
             ))}
           </div>
         ) : (
-          <p className="text-center text-neutral-500">Тарифы скоро появятся.</p>
+          <div className="mt-16 rounded-2xl border border-dashed border-zinc-200 bg-zinc-50/30 p-12 text-center">
+            <p className="text-sm font-medium text-zinc-500 tracking-tight">
+              Тарифы скоро появятся.
+            </p>
+          </div>
         )}
       </Container>
     </section>

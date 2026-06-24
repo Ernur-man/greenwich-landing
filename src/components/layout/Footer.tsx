@@ -16,7 +16,7 @@ export function Footer({ contacts }: FooterProps) {
       <Container className="py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div>
-            <h3 className="text-lg font-semibold text-neutral-900">Keenfort</h3>
+            <h3 className="text-lg font-semibold text-neutral-900">Greenwich English School</h3>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-neutral-600">
               Премиальная школа английского языка для тех, кто ценит качество,
               персональный подход и измеримый результат.
@@ -89,7 +89,7 @@ export function Footer({ contacts }: FooterProps) {
         </div>
 
         <div className="mt-12 border-t border-neutral-200 pt-8 text-sm text-neutral-500">
-          © {year} Keenfort. Все права защищены.
+          © {year} Greenwich. Все права защищены.
         </div>
       </Container>
     </footer>

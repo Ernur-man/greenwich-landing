@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { User } from "lucide-react";
 
 import { Card } from "@/components/ui/Card";
 import type { Teacher } from "@/types/teacher";
@@ -8,26 +9,33 @@ interface TeacherCardProps {
 }
 
 export function TeacherCard({ teacher }: TeacherCardProps) {
+  const hasPhoto = teacher.photo && teacher.photo.startsWith('http');
+
   return (
-    <Card className="flex h-full flex-col overflow-hidden p-0">
-      <div className="relative aspect-[4/5] bg-neutral-100">
-        {teacher.photo && teacher.photo.startsWith('http') ? (
+    <Card className="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-100 bg-white p-0 shadow-sm transition-all hover:border-zinc-200/80 hover:shadow-md">
+      <div className="relative aspect-[4/5] overflow-hidden bg-zinc-50 border-b border-zinc-100">
+        {hasPhoto ? (
           <Image 
             src={teacher.photo} 
             alt={teacher.name} 
             fill 
-            className="object-cover" 
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-103" 
           />
         ) : (
-          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-            <span>Нет фото</span>
+          <div className="flex h-full w-full items-center justify-center bg-zinc-50 text-zinc-400">
+            <User className="h-8 w-8 stroke-[1.25]" />
           </div>
         )}
       </div>
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-xl font-semibold text-neutral-900">{teacher.name}</h3>
-        <p className="mt-1 text-sm font-medium text-accent">{teacher.experience}</p>
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600">
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="text-lg font-semibold tracking-tight text-zinc-900 transition-colors group-hover:text-zinc-600">
+          {teacher.name}
+        </h3>
+        <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-zinc-400">
+          {teacher.experience}
+        </p>
+        <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-500">
           {teacher.description}
         </p>
       </div>

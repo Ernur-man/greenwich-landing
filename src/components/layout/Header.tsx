@@ -21,15 +21,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200/80 bg-white/95 backdrop-blur">
       <Container className="flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label="Keenfort">
+        <Link href="/" className="flex items-center gap-3" aria-label="Greenwich English School">
           <Image
-            src="/keenfort_logo.svg"
-            alt="Keenfort"
-            width={140}
-            height={36}
+            src="/greenwich_logo.svg"
+            alt="Greenwich English School"
+            width={320}
+            height={58}
             priority
             unoptimized
-            style={{ width: 'auto', height: '36px' }}
+            style={{ width: 'auto', height: '58px' }}
           />
         </Link>
 

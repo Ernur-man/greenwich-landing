@@ -77,8 +77,8 @@ export function ApplicationForm({ plans }: ApplicationFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
-      <div className="grid gap-6 md:grid-cols-2">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
+      <div className="grid gap-5 md:grid-cols-2">
         <Input
           label="Имя"
           placeholder="Ваше имя"
@@ -93,7 +93,7 @@ export function ApplicationForm({ plans }: ApplicationFormProps) {
         />
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2">
         <Input
           label="Email"
           type="email"
@@ -116,9 +116,16 @@ export function ApplicationForm({ plans }: ApplicationFormProps) {
         {...register("comment")}
       />
 
-      <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
-        {isSubmitting ? "Отправка..." : "Отправить заявку"}
-      </Button>
+      <div className="pt-2">
+        <Button 
+          type="submit" 
+          size="lg" 
+          disabled={isSubmitting} 
+          className="w-full sm:w-auto rounded-xl bg-zinc-900 text-white font-medium transition-all hover:bg-zinc-800 active:scale-95 disabled:opacity-50 disabled:pointer-events-none shadow-sm"
+        >
+          {isSubmitting ? "Отправка..." : "Отправить заявку"}
+        </Button>
+      </div>
     </form>
   );
 }

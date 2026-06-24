@@ -10,7 +10,7 @@ interface ReviewsSectionProps {
 
 export function ReviewsSection({ title, reviews }: ReviewsSectionProps) {
   return (
-    <section id="reviews" className="bg-neutral-50 py-20 lg:py-28">
+    <section id="reviews" className="bg-zinc-50/50 py-24 lg:py-32 border-y border-zinc-100">
       <Container>
         <SectionHeading
           title={title}
@@ -18,13 +18,17 @@ export function ReviewsSection({ title, reviews }: ReviewsSectionProps) {
         />
 
         {reviews.length > 0 ? (
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {reviews.map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))}
           </div>
         ) : (
-          <p className="text-center text-neutral-500">Отзывы скоро появятся.</p>
+          <div className="mt-16 rounded-2xl border border-dashed border-zinc-200 bg-zinc-50/30 p-12 text-center">
+            <p className="text-sm font-medium text-zinc-500 tracking-tight">
+              Отзывы скоро появятся.
+            </p>
+          </div>
         )}
       </Container>
     </section>

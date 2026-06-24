@@ -10,7 +10,7 @@ interface TeachersSectionProps {
 
 export function TeachersSection({ title, teachers }: TeachersSectionProps) {
   return (
-    <section id="teachers" className="bg-white py-20 lg:py-28">
+    <section id="teachers" className="bg-white py-24 lg:py-32">
       <Container>
         <SectionHeading
           title={title}
@@ -18,15 +18,17 @@ export function TeachersSection({ title, teachers }: TeachersSectionProps) {
         />
 
         {teachers.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {teachers.map((teacher) => (
               <TeacherCard key={teacher.id} teacher={teacher} />
             ))}
           </div>
         ) : (
-          <p className="text-center text-neutral-500">
-            Информация о преподавателях скоро появится.
-          </p>
+          <div className="mt-16 rounded-2xl border border-dashed border-zinc-200 bg-zinc-50/30 p-12 text-center">
+            <p className="text-sm font-medium text-zinc-500 tracking-tight">
+              Информация о преподавателях скоро появится.
+            </p>
+          </div>
         )}
       </Container>
     </section>
